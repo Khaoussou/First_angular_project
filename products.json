@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "libelle": "coco lay lay",
+      "description": " boy bou gatt bi",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "id": 2,
+      "libelle": "Coca",
+      "description": " daffa nekh",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "id": 3,
+      "libelle": "poulet",
+      "description": " keine dou mom",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "id": 4,
+      "libelle": "coco lay lay",
+      "description": " boy bou gatt bi",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "id": 5,
+      "libelle": "Coca",
+      "description": " daffa nekh",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "id": 6,
+      "libelle": "poulet",
+      "description": " keine dou mom",
+      "quantite": 1,
+      "prix": 150
+    },
+    {
+      "libelle": "PC Gamer",
+      "description": "Un PC gamer utlra puissant ram 16GB Disque SSD 500GB",
+      "prix": 350000,
+      "quantite": 7,
+      "id": 7
+    },
+    {
+      "libelle": "khoussou",
+      "description": "gatt boy ",
+      "prix": 3,
+      "quantite": 1,
+      "image": null,
+      "id": 8
+    }
+  ]
+}

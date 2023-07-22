@@ -1,0 +1,48 @@
+<div class="col-md-5 offset-3 mt-5 ">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <!-- {{formGroup.controls["libelle"].errors|json}} -->
+    <div class="mb-3">
+      <label for="image" class="form-label">image</label>
+      <input type="file" class="form-control" formControlName="image" id="image" aria-describedby="emailHelp"
+        (change)="onChange($event)">
+      <div *ngIf="file">
+        <img [src]="imageUrl" alt="" class="img-thumbnail">
+      </div>
+      <div *ngIf="formGroup.controls['image'].errors && formGroup.controls['image'].dirty" class="text-danger">
+        {{ getErrorsMessage("image" ,formGroup.controls['image'].errors)}}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="libelle" class="form-label">Libelle</label>
+      <input type="text" class="form-control" formControlName="libelle" id="libelle" aria-describedby="emailHelp">
+      <div *ngIf="formGroup.controls['libelle'].errors && formGroup.controls['libelle'].dirty" class="text-danger">
+        {{ getErrorsMessage("libelle" ,formGroup.controls['libelle'].errors)}}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" formControlName="description" id="description">
+      <div *ngIf="formGroup.controls['description'].errors && formGroup.controls['description'].dirty"
+        class="text-danger">
+        {{ getErrorsMessage("description" ,formGroup.controls['description'].errors)}}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="prix" class="form-label">Prix</label>
+      <input type="number" class="form-control" formControlName="prix" id="prix">
+      <div *ngIf="formGroup.controls['prix'].errors && formGroup.controls['prix'].dirty" class="text-danger">
+        {{ getErrorsMessage("prix" ,formGroup.controls['prix'].errors)}}
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="quantite" class="form-label">Quantité</label>
+      <input type="number" class="form-control" formControlName="quantite" id="quantite">
+      <div *ngIf="formGroup.controls['quantite'].errors && formGroup.controls['quantite'].dirty" class="text-danger">
+        {{ getErrorsMessage("quantite" ,formGroup.controls['quantite'].errors)}}
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="ajouter" [disabled]="this.formGroup.invalid">Ajouter</button>
+  </form>
+
+</div>

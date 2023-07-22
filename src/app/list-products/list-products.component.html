@@ -1,0 +1,21 @@
+<div class="container mt-4 mb-4">
+  <div class="d-flex justify-content-between">
+
+    <h1>La liste des produits</h1>
+    <button class="btn btn-primary" routerLink="/add-product">Ajouter</button>
+  </div>
+  <div class="d-flex flex-wrap  gap-3">
+    <div class="card mt-4 " style="width: 18rem;" *ngFor="let product of products">
+      <div class="card-body">
+        <h5 class="card-title">{{product.libelle}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{product.prix}}</h6>
+        <p class="card-text">{{product.description}}</p>
+        <div class="d-flex justify-content-end align-items-center gap-3">
+          <button class="btn btn-primary fs-6" [routerLink]="['/update-product',product.id]">Modifier</button>
+          <button class="btn btn-danger fs-6">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
